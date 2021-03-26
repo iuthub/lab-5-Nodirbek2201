@@ -3,6 +3,23 @@
 	<head>
 		<title>Buy Your Way to a Better Education!</title>
 		<link href="buyagrade.css" type="text/css" rel="stylesheet" />
+		<style>
+			input{
+				background-color: lightgray;
+				padding:2px;
+				
+			}
+			select{
+				background-color: lightgrey;
+			}
+			.title button{
+				background-color: lightgrey;
+				width: 100%;
+				height: 50px;
+				border: none;
+				font-size: 24px;
+			}
+		</style>
 	</head>
 	
 	<body>
@@ -13,27 +30,37 @@
 		</p>
 		
 		<hr />
-		
-		<h2>Give Us Your Money</h2>
-		<dl>
-			<dt>Name</dt>
-			<dd>
-				???
-			</dd>
-			
-			<dt>Section</dt>
-			<dd>
-				???
-			</dd>
-			
-			<dt>Credit Card</dt>
-			<dd>
-				???
-			</dd>
-		</dl>
-		
-		<div>
-			I am a giant sucker.
-		</div>
+		<form action="http://httpbin.org/get">
+			<h2>Give Us Your Money</h2>
+			<dl>
+				<dt>Name</dt>
+				<dd>
+					<input type="text"/>
+				</dd>
+
+				<dt>Section</dt>
+				<dd>
+					<select name="sectionName">
+						<option value="0">(Select a option)</option>
+						<option value="1">Option1</option>
+						<option value="2">Option2</option>
+						<option value="3">Option3</option>
+						<option value="4">Option4</option>
+						<option value="5">Option5</option>
+					</select>
+				</dd>
+
+				<dt>Credit Card</dt>
+				<dd>
+					<input type="text"/>
+					<input type="radio" name="PayMethodName" value="visa"/> Visa
+					<input type="radio" name="PayMethodName" value="mastercard"/> MasterCard
+				</dd>
+			</dl>
+
+			<div class="title">
+				<button>I am a giant sucker.</button>
+			</div>
+		</form>
 	</body>
 </html>
